@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0057416E3B9B53A1DAEF06AE /* Pods_DesafioOuro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A232B4D1AA83097AB25BAC /* Pods_DesafioOuro.framework */; };
 		3F9BE4E21C89BDF8002EDC6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9BE4E11C89BDF8002EDC6E /* AppDelegate.swift */; };
 		3F9BE4E71C89BDF8002EDC6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9BE4E51C89BDF8002EDC6E /* Main.storyboard */; };
 		3F9BE4E91C89BDF8002EDC6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9BE4E81C89BDF8002EDC6E /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1912BDE0DFB74F2666373575 /* Pods-DesafioOuro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioOuro.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesafioOuro/Pods-DesafioOuro.release.xcconfig"; sourceTree = "<group>"; };
 		3F9BE4DE1C89BDF8002EDC6E /* DesafioOuro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioOuro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9BE4E11C89BDF8002EDC6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F9BE4E61C89BDF8002EDC6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,6 +30,8 @@
 		3F9BE4F81C89C04C002EDC6E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3F9BE4FA1C89C37C002EDC6E /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		3F9BE4FC1C89C421002EDC6E /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		82BE6E7B98E2D4389A632C93 /* Pods-DesafioOuro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioOuro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DesafioOuro/Pods-DesafioOuro.debug.xcconfig"; sourceTree = "<group>"; };
+		F8A232B4D1AA83097AB25BAC /* Pods_DesafioOuro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioOuro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0057416E3B9B53A1DAEF06AE /* Pods_DesafioOuro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +52,8 @@
 				3F9BE4E01C89BDF8002EDC6E /* DesafioOuro */,
 				3F9BE4F31C89BE1B002EDC6E /* Supporting Files */,
 				3F9BE4DF1C89BDF8002EDC6E /* Products */,
+				D531C4BDFCBCD418168A671D /* Pods */,
+				CB5E368A8E39B99ED60CDFD9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +113,23 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		CB5E368A8E39B99ED60CDFD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8A232B4D1AA83097AB25BAC /* Pods_DesafioOuro.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D531C4BDFCBCD418168A671D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82BE6E7B98E2D4389A632C93 /* Pods-DesafioOuro.debug.xcconfig */,
+				1912BDE0DFB74F2666373575 /* Pods-DesafioOuro.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,9 +137,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F9BE4F01C89BDF8002EDC6E /* Build configuration list for PBXNativeTarget "DesafioOuro" */;
 			buildPhases = (
+				DDC43BC822CC1226178F6902 /* Check Pods Manifest.lock */,
 				3F9BE4DA1C89BDF8002EDC6E /* Sources */,
 				3F9BE4DB1C89BDF8002EDC6E /* Frameworks */,
 				3F9BE4DC1C89BDF8002EDC6E /* Resources */,
+				EC623BD9390383A4D01D73D4 /* Embed Pods Frameworks */,
+				B4975DED8F81CB9C1ADC3565 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -171,6 +198,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B4975DED8F81CB9C1ADC3565 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DesafioOuro/Pods-DesafioOuro-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDC43BC822CC1226178F6902 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EC623BD9390383A4D01D73D4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DesafioOuro/Pods-DesafioOuro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3F9BE4DA1C89BDF8002EDC6E /* Sources */ = {
@@ -290,6 +365,7 @@
 		};
 		3F9BE4F11C89BDF8002EDC6E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82BE6E7B98E2D4389A632C93 /* Pods-DesafioOuro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DesafioOuro/Info.plist;
@@ -301,6 +377,7 @@
 		};
 		3F9BE4F21C89BDF8002EDC6E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1912BDE0DFB74F2666373575 /* Pods-DesafioOuro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DesafioOuro/Info.plist;
@@ -329,6 +406,7 @@
 				3F9BE4F21C89BDF8002EDC6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

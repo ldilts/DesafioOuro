@@ -39,7 +39,7 @@ class DetailViewController: UIViewController {
             
         }
         
-        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        //UIApplication.sharedApplication().statusBarStyle = .LightContent
         
         let topGradient: CAGradientLayer = CAGradientLayer()
         topGradient.frame = CGRectMake(0.0, 0.0, UIScreen.mainScreen().bounds.size.width, 20.0)
@@ -55,7 +55,7 @@ class DetailViewController: UIViewController {
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
-        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
+        //UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
     }
 
     override func didReceiveMemoryWarning() {

@@ -10,6 +10,7 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
+    @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
@@ -26,6 +27,7 @@ class TableViewCell: UITableViewCell {
         
         if let photo = self.album.albumImage {
             self.photoImageView.image = photo
+            self.backgroundImageView.image = photo
         }
         
         if let title = self.album.titleText {
