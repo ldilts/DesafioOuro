@@ -39,15 +39,13 @@ class DetailViewController: UIViewController {
             
         }
         
-        //UIApplication.sharedApplication().statusBarStyle = .LightContent
-        
         let topGradient: CAGradientLayer = CAGradientLayer()
         topGradient.frame = CGRectMake(0.0, 0.0, UIScreen.mainScreen().bounds.size.width, 20.0)
         topGradient.colors = [UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.5).CGColor, UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0).CGColor]
         self.statusBarBackgroundView.layer.insertSublayer(topGradient, atIndex: 0)
         
         let bottomGradient: CAGradientLayer = CAGradientLayer()
-        bottomGradient.frame = CGRectMake(0.0, UIScreen.mainScreen().bounds.size.width - 44.0, UIScreen.mainScreen().bounds.size.width, 44.0)
+        bottomGradient.frame = CGRectMake(0.0, 0.0, UIScreen.mainScreen().bounds.size.width, 44.0)
         bottomGradient.colors = [UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0).CGColor, UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.5).CGColor]
         self.photoBottomFade.layer.insertSublayer(bottomGradient, atIndex: 0)
     }

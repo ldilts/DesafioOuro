@@ -23,6 +23,16 @@ class TableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
+        // Set up a refresh control, call reload to start things up
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: "reload", forControlEvents: .ValueChanged)
+//        reload()
+//        refreshControl?.beginRefreshing()
+        
+        let adjustForTabbarInsets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: CGRectGetHeight((self.tabBarController?.tabBar.frame)!), right: 0)
+        self.tableView.contentInset = adjustForTabbarInsets
+        self.tableView.scrollIndicatorInsets = adjustForTabbarInsets
+        
         self.albums = [
             Album(withImage: UIImage(named: "album_one")!, andTitle: "Work", andDetail: "Rihanna feat. Drake"),
             Album(withImage: UIImage(named: "album_two")!, andTitle: "Love Yourself", andDetail: "Justin Bieber"),
@@ -44,13 +54,10 @@ class TableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        print("\n\n         Count: \(self.albums.count)\n\n")
         return self.albums.count
     }
     
@@ -111,7 +118,13 @@ class TableViewController: UITableViewController {
         return true
     }
     */
-
+    
+    // MARK: - Helper Methods
+    
+    func reload() {
+        tableView.reloadData()
+        self.refreshControl?.endRefreshing()
+    }
     
     // MARK: - Navigation
 
