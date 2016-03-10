@@ -19,6 +19,8 @@
 		3FBEDCF81C8F1F9200257C00 /* DetailHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBEDCF71C8F1F9200257C00 /* DetailHeaderTableViewCell.swift */; };
 		3FBEDCFA1C8F1FBB00257C00 /* DetailTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBEDCF91C8F1FBB00257C00 /* DetailTitleTableViewCell.swift */; };
 		3FBEDCFC1C8F1FF700257C00 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBEDCFB1C8F1FF700257C00 /* DetailTableViewController.swift */; };
+		3FEB1B6D1C91A4E500323661 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FEB1B6C1C91A4E500323661 /* CloudKit.framework */; };
+		3FEB1B6F1C91B02800323661 /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEB1B6E1C91B02800323661 /* CloudKitHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,9 @@
 		3FBEDCF71C8F1F9200257C00 /* DetailHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		3FBEDCF91C8F1FBB00257C00 /* DetailTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTitleTableViewCell.swift; sourceTree = "<group>"; };
 		3FBEDCFB1C8F1FF700257C00 /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		3FEB1B6B1C91A4D700323661 /* DesafioOuro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DesafioOuro.entitlements; sourceTree = "<group>"; };
+		3FEB1B6C1C91A4E500323661 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		3FEB1B6E1C91B02800323661 /* CloudKitHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitHelper.swift; sourceTree = "<group>"; };
 		82BE6E7B98E2D4389A632C93 /* Pods-DesafioOuro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioOuro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DesafioOuro/Pods-DesafioOuro.debug.xcconfig"; sourceTree = "<group>"; };
 		F8A232B4D1AA83097AB25BAC /* Pods_DesafioOuro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioOuro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -46,6 +51,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0057416E3B9B53A1DAEF06AE /* Pods_DesafioOuro.framework in Frameworks */,
+				3FEB1B6D1C91A4E500323661 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +80,7 @@
 		3F9BE4E01C89BDF8002EDC6E /* DesafioOuro */ = {
 			isa = PBXGroup;
 			children = (
+				3FEB1B6B1C91A4D700323661 /* DesafioOuro.entitlements */,
 				3F9BE4F41C89BE62002EDC6E /* View */,
 				3F9BE4F51C89BE67002EDC6E /* Controller */,
 				3F9BE4FE1C89C425002EDC6E /* Model */,
@@ -118,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				3F9BE4FC1C89C421002EDC6E /* Album.swift */,
+				3FEB1B6E1C91B02800323661 /* CloudKitHelper.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -125,6 +133,7 @@
 		CB5E368A8E39B99ED60CDFD9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3FEB1B6C1C91A4E500323661 /* CloudKit.framework */,
 				F8A232B4D1AA83097AB25BAC /* Pods_DesafioOuro.framework */,
 			);
 			name = Frameworks;
@@ -174,6 +183,12 @@
 				TargetAttributes = {
 					3F9BE4DD1C89BDF8002EDC6E = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 69ZM7V3AUZ;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -269,6 +284,7 @@
 				3F9BE4FD1C89C421002EDC6E /* Album.swift in Sources */,
 				3FBEDCF81C8F1F9200257C00 /* DetailHeaderTableViewCell.swift in Sources */,
 				3FBEDCFA1C8F1FBB00257C00 /* DetailTitleTableViewCell.swift in Sources */,
+				3FEB1B6F1C91B02800323661 /* CloudKitHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,10 +396,14 @@
 			baseConfigurationReference = 82BE6E7B98E2D4389A632C93 /* Pods-DesafioOuro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DesafioOuro/DesafioOuro.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DesafioOuro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.hackatruck.DesafioOuro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -392,10 +412,14 @@
 			baseConfigurationReference = 1912BDE0DFB74F2666373575 /* Pods-DesafioOuro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DesafioOuro/DesafioOuro.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DesafioOuro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.hackatruck.DesafioOuro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
