@@ -1,5 +1,5 @@
 //
-//  MovieDetailHeaderTableViewCell.swift
+//  MovieDetailSubheaderTableViewCell.swift
 //  DesafioOuro
 //
 //  Created by Student on 3/11/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MovieDetailHeaderTableViewCell: MovieDetailTableViewCell {
+class MovieDetailSubheaderTableViewCell: MovieDetailTableViewCell {
     
     // MARK: - Helper Methods
     

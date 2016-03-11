@@ -1,5 +1,5 @@
 //
-//  MovieDetailHeaderTableViewCell.swift
+//  MovieDetailTableViewCell.swift
 //  DesafioOuro
 //
 //  Created by Student on 3/11/16.
@@ -8,12 +8,18 @@
 
 import UIKit
 
-class MovieDetailHeaderTableViewCell: MovieDetailTableViewCell {
+class MovieDetailTableViewCell: UITableViewCell {
+    
+    var album: Album! {
+        didSet {
+            self.configureUI()
+        }
+    }
     
     // MARK: - Helper Methods
     
-    override func configureUI() {
-        
+    func configureUI() {
+        print("\n\n     Do nothing\n\n")
     }
     
     // MARK: - Other methods

@@ -1004,7 +1004,7 @@
                                     </variation>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TitleCell" rowHeight="77" id="gIj-Ef-SP7" userLabel="Title Table View Cell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SubheaderCell" rowHeight="77" id="gIj-Ef-SP7" userLabel="Title Table View Cell" customClass="MovieDetailSubheaderTableViewCell" customModule="DesafioOuro" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="428" width="600" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gIj-Ef-SP7" id="0Y2-lr-aaq">

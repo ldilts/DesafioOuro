@@ -9,6 +9,11 @@
 import UIKit
 
 class MovieDetailTableViewController: UITableViewController {
+    
+    private let kCellIdentifiers: [String] = ["HeaderCell", "SubheaderCell"]
+    var album: Album!
+    
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,24 +33,28 @@ class MovieDetailTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 2
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        let cell: MovieDetailTableViewCell!
+        
+        if indexPath.row == 0 {
+            cell = tableView.dequeueReusableCellWithIdentifier("HeaderCell", forIndexPath: indexPath) as! MovieDetailHeaderTableViewCell
+        } else {
+            cell = tableView.dequeueReusableCellWithIdentifier("TitleCell", forIndexPath: indexPath) as! MovieDetailSubheaderTableViewCell
+        }
+        
+        if let _ = album {
+            cell.album = self.album
+        }
+        
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
