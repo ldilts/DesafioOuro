@@ -326,7 +326,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sl9-pd-sEC" id="jqD-aw-XpM">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -709,16 +709,16 @@
             </objects>
             <point key="canvasLocation" x="2710.5" y="103.5"/>
         </scene>
-        <!--Detail Table View Controller-->
+        <!--Movie Detail Table View Controller-->
         <scene sceneID="TlA-56-IbW">
             <objects>
-                <tableViewController id="0ay-E6-DgO" customClass="DetailTableViewController" customModule="DesafioOuro" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="0ay-E6-DgO" customClass="MovieDetailTableViewController" customModule="DesafioOuro" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="IEz-7M-dFQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="400" id="KhU-Mc-RU5" userLabel="Header Table View Cell" customClass="DetailHeaderTableViewCell" customModule="DesafioOuro" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="400" id="KhU-Mc-RU5" userLabel="Header Table View Cell" customClass="MovieDetailHeaderTableViewCell" customModule="DesafioOuro" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="400"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KhU-Mc-RU5" id="5pe-wb-uyK">
@@ -1004,7 +1004,7 @@
                                     </variation>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TitleCell" rowHeight="77" id="gIj-Ef-SP7" userLabel="Title Table View Cell" customClass="DetailTitleTableViewCell" customModule="DesafioOuro" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TitleCell" rowHeight="77" id="gIj-Ef-SP7" userLabel="Title Table View Cell">
                                 <rect key="frame" x="0.0" y="428" width="600" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gIj-Ef-SP7" id="0Y2-lr-aaq">

@@ -1,20 +1,14 @@
 //
-//  DetailTitleTableViewCell.swift
+//  MovieDetailHeaderTableViewCell.swift
 //  DesafioOuro
 //
-//  Created by Student on 3/8/16.
+//  Created by Student on 3/11/16.
 //  Copyright © 2016 Student. All rights reserved.
 //
 
 import UIKit
 
-class DetailTitleTableViewCell: UITableViewCell {
-    
-    var album: Album! {
-        didSet {
-//            self.configureUI()
-        }
-    }
+class MovieDetailHeaderTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -1,16 +1,14 @@
 //
-//  DetailTableViewController.swift
+//  FeedTableViewController.swift
 //  DesafioOuro
 //
-//  Created by Student on 3/8/16.
+//  Created by Student on 3/11/16.
 //  Copyright © 2016 Student. All rights reserved.
 //
 
 import UIKit
 
-class DetailTableViewController: UITableViewController {
-    
-    private let kCellIdentifiers: [String] = ["HeaderCell", "TitleCell"]
+class FeedTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,33 +28,24 @@ class DetailTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        // #warning Incomplete implementation, return the number of sections
+        return 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.kCellIdentifiers.count
+        // #warning Incomplete implementation, return the number of rows
+        return 0
     }
 
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        if indexPath.row == 0 {
-            
-            let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! DetailHeaderTableViewCell
-            
-            
-            return cell
-            
-        } else {
-            
-            let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! DetailTitleTableViewCell
-            
-            
-            return cell
-            
-        }
-        
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+
+        // Configure the cell...
+
+        return cell
     }
+    */
 
     /*
     // Override to support conditional editing of the table view.
