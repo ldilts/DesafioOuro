@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0057416E3B9B53A1DAEF06AE /* Pods_DesafioOuro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A232B4D1AA83097AB25BAC /* Pods_DesafioOuro.framework */; };
+		3F1DCBE81C91999D00D3078E /* Filme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1DCBE71C91999D00D3078E /* Filme.swift */; };
+		3F1DCBEA1C919BDF00D3078E /* ESRequestOMDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1DCBE91C919BDF00D3078E /* ESRequestOMDB.swift */; };
 		3F9BE4E21C89BDF8002EDC6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9BE4E11C89BDF8002EDC6E /* AppDelegate.swift */; };
 		3F9BE4E71C89BDF8002EDC6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9BE4E51C89BDF8002EDC6E /* Main.storyboard */; };
 		3F9BE4E91C89BDF8002EDC6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9BE4E81C89BDF8002EDC6E /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		1912BDE0DFB74F2666373575 /* Pods-DesafioOuro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioOuro.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesafioOuro/Pods-DesafioOuro.release.xcconfig"; sourceTree = "<group>"; };
+		3F1DCBE71C91999D00D3078E /* Filme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filme.swift; sourceTree = "<group>"; };
+		3F1DCBE91C919BDF00D3078E /* ESRequestOMDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESRequestOMDB.swift; sourceTree = "<group>"; };
 		3F9BE4DE1C89BDF8002EDC6E /* DesafioOuro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioOuro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9BE4E11C89BDF8002EDC6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F9BE4E61C89BDF8002EDC6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 				3FBEDCF71C8F1F9200257C00 /* DetailHeaderTableViewCell.swift */,
 				3FBEDCF91C8F1FBB00257C00 /* DetailTitleTableViewCell.swift */,
 				3FBEDCFB1C8F1FF700257C00 /* DetailTableViewController.swift */,
+				3F1DCBE91C919BDF00D3078E /* ESRequestOMDB.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F9BE4F91C89C04C002EDC6E /* DetailViewController.swift in Sources */,
+				3F1DCBE81C91999D00D3078E /* Filme.swift in Sources */,
 				3F9BE4FB1C89C37C002EDC6E /* TableViewCell.swift in Sources */,
 				3F9BE4E21C89BDF8002EDC6E /* AppDelegate.swift in Sources */,
 				3F9BE4F71C89BE86002EDC6E /* TableViewController.swift in Sources */,
