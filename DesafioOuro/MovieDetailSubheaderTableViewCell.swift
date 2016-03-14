@@ -10,10 +10,13 @@ import UIKit
 
 class MovieDetailSubheaderTableViewCell: MovieDetailTableViewCell {
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    
     // MARK: - Helper Methods
     
     override func configureUI() {
-        
+        self.titleLabel.text = self.album.titleText
     }
     
     // MARK: - Other methods

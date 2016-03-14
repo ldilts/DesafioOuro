@@ -295,6 +295,7 @@
                                     <outlet property="photoImageView" destination="y6Y-tC-C1g" id="uKt-P4-Dpw"/>
                                     <outlet property="shareButton" destination="11O-W4-Z6g" id="V4k-09-m73"/>
                                     <outlet property="titleLabel" destination="BeT-it-NCs" id="Bhs-wp-wBz"/>
+                                    <segue destination="0ay-E6-DgO" kind="show" identifier="showDetailSegue" id="dgO-SL-RLE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -305,9 +306,6 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Feed" image="Feed Icon" id="ybu-vB-4Ex"/>
                     <navigationItem key="navigationItem" title="Feed" id="pmZ-ia-TaU"/>
-                    <connections>
-                        <segue destination="I1n-gp-uEI" kind="presentation" identifier="showDetailSegue" id="gXC-mT-eRs"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yrh-B4-h3r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -725,7 +723,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3EA-90-7oj">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3EA-90-7oj">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="3EA-90-7oj" secondAttribute="height" multiplier="1:1" id="Mlt-Ol-JfY"/>
@@ -1003,6 +1001,11 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bottomFadeView" destination="zcB-ev-Way" id="yW3-hf-xJ7"/>
+                                    <outlet property="photoImageView" destination="3EA-90-7oj" id="biD-db-N0Z"/>
+                                    <outlet property="topFadeView" destination="mKw-Hk-DJD" id="mwq-Gx-1At"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SubheaderCell" rowHeight="77" id="gIj-Ef-SP7" userLabel="Title Table View Cell" customClass="MovieDetailSubheaderTableViewCell" customModule="DesafioOuro" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="428" width="600" height="77"/>
@@ -1090,6 +1093,10 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="subtitleLabel" destination="vlh-1O-7zd" id="Oxz-tl-eCk"/>
+                                    <outlet property="titleLabel" destination="Vhz-3k-6vG" id="gIo-ld-Mih"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

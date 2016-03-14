@@ -46,7 +46,7 @@ class MovieDetailTableViewController: UITableViewController {
         if indexPath.row == 0 {
             cell = tableView.dequeueReusableCellWithIdentifier("HeaderCell", forIndexPath: indexPath) as! MovieDetailHeaderTableViewCell
         } else {
-            cell = tableView.dequeueReusableCellWithIdentifier("TitleCell", forIndexPath: indexPath) as! MovieDetailSubheaderTableViewCell
+            cell = tableView.dequeueReusableCellWithIdentifier("SubheaderCell", forIndexPath: indexPath) as! MovieDetailSubheaderTableViewCell
         }
         
         if let _ = album {

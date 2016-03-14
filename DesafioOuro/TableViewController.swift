@@ -133,7 +133,7 @@ class TableViewController: UITableViewController {
         
         if segue.identifier == "showDetailSegue" {
             
-            let destinationViewController: DetailViewController = segue.destinationViewController as! DetailViewController
+            let destinationViewController: MovieDetailTableViewController = segue.destinationViewController as! MovieDetailTableViewController
             
             destinationViewController.album = self.selectedAlbum
         }
