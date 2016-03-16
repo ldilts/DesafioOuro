@@ -297,6 +297,7 @@
 				3FE0E39E1C92F14E005E294E /* MovieDetailHeaderTableViewCell.swift in Sources */,
 				3F9467221C92F0650034A34C /* MovieDetailTableViewController.swift in Sources */,
 				3F2B98211C96E29500C400A7 /* Movie.swift in Sources */,
+				3F3E46621C998FA300DC7DDB /* RequestTMDB.swift in Sources */,
 				3F2949A31C92FE0E002E3EB9 /* MovieDetailTableViewCell.swift in Sources */,
 				3F9BE4F91C89C04C002EDC6E /* DetailViewController.swift in Sources */,
 				3F94671E1C92F0090034A34C /* FeedTableViewController.swift in Sources */,
