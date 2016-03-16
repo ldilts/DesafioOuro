@@ -28,7 +28,7 @@ class TableViewController: UITableViewController {
         // Set up a refresh control, call reload to start things up
         requestHelper = RequestTMDB()
         
-        requestHelper.request("https://api.themoviedb.org/3/movie/popular?api_key=beebbeb51a373274d8f87662b8bb4193&page=1")
+        requestHelper.request("https://api.themoviedb.org/3/movie/popular?api_key=beebbeb51a373274d8f87662b8bb4193&page=2")
 
         
         refreshControl = UIRefreshControl()
