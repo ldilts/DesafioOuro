@@ -12,6 +12,8 @@ class TableViewController: UITableViewController {
     
     var albums: [Album]!
     
+    var requestHelper: RequestTMDB!
+    
     private var selectedAlbum: Album!
 
     override func viewDidLoad() {
@@ -24,6 +26,11 @@ class TableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         // Set up a refresh control, call reload to start things up
+        requestHelper = RequestTMDB()
+        
+        requestHelper.request("https://api.themoviedb.org/3/movie/popular?api_key=beebbeb51a373274d8f87662b8bb4193&page=2")
+
+        
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: "reload", forControlEvents: .ValueChanged)
 //        reload()

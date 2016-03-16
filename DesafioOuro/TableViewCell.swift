@@ -23,6 +23,15 @@ class TableViewCell: UITableViewCell {
         }
     }
     
+    var movie: Movie!{
+        didSet{
+            self.configureUIAux()
+        }
+    }
+    
+    private func configureUIAux(){
+    }
+    
     private func configureUI() {
         
         if let photo = self.album.albumImage {
