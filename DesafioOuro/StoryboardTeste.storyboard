@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kTv-Jl-5Ma">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Graphics View Controller-->
+        <scene sceneID="SUi-HG-e0E">
+            <objects>
+                <viewController id="kTv-Jl-5Ma" customClass="GraphicsViewController" customModule="DesafioOuro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VlR-R3-DSj"/>
+                        <viewControllerLayoutGuide type="bottom" id="49A-Y6-SpN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QHx-Re-k7Y">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u0W-eN-8az" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="171" width="516" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="282" id="6tl-QN-EL7"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6tl-QN-EL7"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="6tl-QN-EL7"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="u0W-eN-8az" firstAttribute="leading" secondItem="QHx-Re-k7Y" secondAttribute="leading" constant="20" id="8ZN-Tj-wSi"/>
+                            <constraint firstAttribute="trailing" secondItem="u0W-eN-8az" secondAttribute="trailing" constant="20" id="FfP-vv-ZNY"/>
+                            <constraint firstItem="u0W-eN-8az" firstAttribute="top" secondItem="VlR-R3-DSj" secondAttribute="bottom" id="e6W-zJ-7sP"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8ZN-Tj-wSi"/>
+                                <exclude reference="FfP-vv-ZNY"/>
+                                <exclude reference="e6W-zJ-7sP"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="8ZN-Tj-wSi"/>
+                                <include reference="FfP-vv-ZNY"/>
+                                <include reference="e6W-zJ-7sP"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="lineChartView" destination="u0W-eN-8az" id="9B0-EE-YnY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="beN-x1-TXm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1066.5" y="-1134"/>
+        </scene>
+    </scenes>
+</document>
