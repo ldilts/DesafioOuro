@@ -23,6 +23,24 @@ class MovieDetailTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        self.tableView.estimatedRowHeight = 80
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        
+        self.tableView.setNeedsLayout()
+        self.tableView.layoutIfNeeded()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("backButtonTapped:"), name: "BackButtonTapped", object: nil)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -90,6 +108,12 @@ class MovieDetailTableViewController: UITableViewController {
         return true
     }
     */
+    
+    // MARK: - Helper methods
+    
+    func backButtonTapped(notification: NSNotification) {
+        self.performSegueWithIdentifier("UnwindSegue", sender: self)
+    }
 
     /*
     // MARK: - Navigation

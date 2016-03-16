@@ -14,6 +14,12 @@ class MovieDetailHeaderTableViewCell: MovieDetailTableViewCell {
     @IBOutlet weak var topFadeView: UIView!
     @IBOutlet weak var bottomFadeView: UIView!
     
+    // MARK: - Actions
+    
+    @IBAction func BackButtonTapped(sender: UIButton) {
+        NSNotificationCenter.defaultCenter().postNotificationName("BackButtonTapped", object: nil)
+    }
+    
     // MARK: - Helper Methods
     
     override func configureUI() {
