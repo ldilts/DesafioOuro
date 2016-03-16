@@ -21,6 +21,7 @@
 		3F9BE4F91C89C04C002EDC6E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9BE4F81C89C04C002EDC6E /* DetailViewController.swift */; };
 		3F9BE4FB1C89C37C002EDC6E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9BE4FA1C89C37C002EDC6E /* TableViewCell.swift */; };
 		3F9BE4FD1C89C421002EDC6E /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9BE4FC1C89C421002EDC6E /* Album.swift */; };
+		3FB08FE31C99917B004F9F4D /* MovieDetailOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB08FE21C99917B004F9F4D /* MovieDetailOverviewTableViewCell.swift */; };
 		3FE0E39E1C92F14E005E294E /* MovieDetailHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0E39D1C92F14E005E294E /* MovieDetailHeaderTableViewCell.swift */; };
 		3FEB1B6D1C91A4E500323661 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FEB1B6C1C91A4E500323661 /* CloudKit.framework */; };
 		3FEB1B6F1C91B02800323661 /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEB1B6E1C91B02800323661 /* CloudKitHelper.swift */; };
@@ -44,6 +45,7 @@
 		3F9BE4F81C89C04C002EDC6E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3F9BE4FA1C89C37C002EDC6E /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		3F9BE4FC1C89C421002EDC6E /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		3FB08FE21C99917B004F9F4D /* MovieDetailOverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailOverviewTableViewCell.swift; sourceTree = "<group>"; };
 		3FE0E39D1C92F14E005E294E /* MovieDetailHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		3FEB1B6B1C91A4D700323661 /* DesafioOuro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DesafioOuro.entitlements; sourceTree = "<group>"; };
 		3FEB1B6C1C91A4E500323661 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -127,6 +129,7 @@
 				3FE0E39D1C92F14E005E294E /* MovieDetailHeaderTableViewCell.swift */,
 				3F2949A01C92FDA9002E3EB9 /* MovieDetailSubheaderTableViewCell.swift */,
 				3F2949A21C92FE0E002E3EB9 /* MovieDetailTableViewCell.swift */,
+				3FB08FE21C99917B004F9F4D /* MovieDetailOverviewTableViewCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				3F2949A11C92FDA9002E3EB9 /* MovieDetailSubheaderTableViewCell.swift in Sources */,
 				3F9BE4FD1C89C421002EDC6E /* Album.swift in Sources */,
 				3FEB1B6F1C91B02800323661 /* CloudKitHelper.swift in Sources */,
+				3FB08FE31C99917B004F9F4D /* MovieDetailOverviewTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

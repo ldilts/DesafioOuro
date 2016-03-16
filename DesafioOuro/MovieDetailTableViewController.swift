@@ -10,7 +10,7 @@ import UIKit
 
 class MovieDetailTableViewController: UITableViewController {
     
-    private let kCellIdentifiers: [String] = ["HeaderCell", "SubheaderCell"]
+    private let kCellIdentifiers: [String] = ["HeaderCell", "SubheaderCell", "OverviewCell"]
     var album: Album!
     
     // MARK: - Lifecycle
@@ -55,7 +55,7 @@ class MovieDetailTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -63,8 +63,12 @@ class MovieDetailTableViewController: UITableViewController {
         
         if indexPath.row == 0 {
             cell = tableView.dequeueReusableCellWithIdentifier("HeaderCell", forIndexPath: indexPath) as! MovieDetailHeaderTableViewCell
-        } else {
+        } else if indexPath.row == 1 {
             cell = tableView.dequeueReusableCellWithIdentifier("SubheaderCell", forIndexPath: indexPath) as! MovieDetailSubheaderTableViewCell
+        } else if indexPath.row == 2 {
+            cell = tableView.dequeueReusableCellWithIdentifier("OverviewCell", forIndexPath: indexPath) as! MovieDetailOverviewTableViewCell
+        } else {
+            cell = MovieDetailTableViewCell()
         }
         
         if let _ = album {
