@@ -13,6 +13,7 @@
 		3F2B98211C96E29500C400A7 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B98201C96E29500C400A7 /* Movie.swift */; };
 		3F8DA71D1C998F1C004AAE9A /* StoryboardTeste.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F8DA71C1C998F1C004AAE9A /* StoryboardTeste.storyboard */; };
 		3F8DA7211C9991B2004AAE9A /* GraphicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8DA7201C9991B2004AAE9A /* GraphicsViewController.swift */; };
+		3F3E46621C998FA300DC7DDB /* RequestTMDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3E46611C998FA300DC7DDB /* RequestTMDB.swift */; };
 		3F94671E1C92F0090034A34C /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F94671D1C92F0090034A34C /* FeedTableViewController.swift */; };
 		3F9467221C92F0650034A34C /* MovieDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9467211C92F0650034A34C /* MovieDetailTableViewController.swift */; };
 		3F9BE4E21C89BDF8002EDC6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9BE4E11C89BDF8002EDC6E /* AppDelegate.swift */; };
@@ -36,6 +37,7 @@
 		3F2B98201C96E29500C400A7 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		3F8DA71C1C998F1C004AAE9A /* StoryboardTeste.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardTeste.storyboard; sourceTree = "<group>"; };
 		3F8DA7201C9991B2004AAE9A /* GraphicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphicsViewController.swift; sourceTree = "<group>"; };
+		3F3E46611C998FA300DC7DDB /* RequestTMDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestTMDB.swift; sourceTree = "<group>"; };
 		3F94671D1C92F0090034A34C /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		3F9467211C92F0650034A34C /* MovieDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailTableViewController.swift; sourceTree = "<group>"; };
 		3F9BE4DE1C89BDF8002EDC6E /* DesafioOuro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioOuro.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +135,7 @@
 				3F2949A01C92FDA9002E3EB9 /* MovieDetailSubheaderTableViewCell.swift */,
 				3F2949A21C92FE0E002E3EB9 /* MovieDetailTableViewCell.swift */,
 				3F8DA7201C9991B2004AAE9A /* GraphicsViewController.swift */,
+				3F3E46611C998FA300DC7DDB /* RequestTMDB.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
