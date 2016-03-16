@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class TableViewController: UITableViewController {
     
     var albums: [Album]!
+    var movies: [Movie]! = [Movie]()
     
     var requestHelper: RequestTMDB!
     
@@ -28,29 +30,22 @@ class TableViewController: UITableViewController {
         // Set up a refresh control, call reload to start things up
         requestHelper = RequestTMDB()
         
-        requestHelper.request("https://api.themoviedb.org/3/movie/popular?api_key=beebbeb51a373274d8f87662b8bb4193&page=2")
-
-        
         refreshControl = UIRefreshControl()
-        refreshControl?.addTarget(self, action: "reload", forControlEvents: .ValueChanged)
+//        refreshControl?.addTarget(self, action: "reload", forControlEvents: .ValueChanged)
 //        reload()
-//        refreshControl?.beginRefreshing()
+        requestHelper.request("https://api.themoviedb.org/3/movie/popular?api_key=beebbeb51a373274d8f87662b8bb4193&page=1")
+        refreshControl?.beginRefreshing()
         
         let adjustForTabbarInsets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: CGRectGetHeight((self.tabBarController?.tabBar.frame)!), right: 0)
         self.tableView.contentInset = adjustForTabbarInsets
         self.tableView.scrollIndicatorInsets = adjustForTabbarInsets
         
-        self.albums = [
-            Album(withImage: UIImage(named: "album_one")!, andTitle: "Work", andDetail: "Rihanna feat. Drake"),
-            Album(withImage: UIImage(named: "album_two")!, andTitle: "Love Yourself", andDetail: "Justin Bieber"),
-            Album(withImage: UIImage(named: "album_three")!, andTitle: "Stressed out", andDetail: "twenty one pilots"),
-            Album(withImage: UIImage(named: "album_two")!, andTitle: "Sorry", andDetail: "Justin Bieber"),
-            Album(withImage: UIImage(named: "album_five")!, andTitle: "My House", andDetail: "Flo Rida"),
-            Album(withImage: UIImage(named: "album_six")!, andTitle: "Pillow Talk", andDetail: "Zayn"),
-            Album(withImage: UIImage(named: "album_seven")!, andTitle: "Me, Myself & I", andDetail: "G-Eazy x Bebe Rexha")
-        ]
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
-        self.tableView.reloadData()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("retreivedMovies:"), name: "MovieFetched", object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -129,6 +124,17 @@ class TableViewController: UITableViewController {
     // MARK: - Helper Methods
     
     func reload() {
+        
+        
+    }
+    
+    func retreivedMovies(notification: NSNotification) {
+        
+        // TODO: Query banco
+        let realm = try! Realm()
+        
+        self.movies = realm.objects(Movie)
+        
         tableView.reloadData()
         self.refreshControl?.endRefreshing()
     }

@@ -132,6 +132,7 @@
 				3F2949A01C92FDA9002E3EB9 /* MovieDetailSubheaderTableViewCell.swift */,
 				3F2949A21C92FE0E002E3EB9 /* MovieDetailTableViewCell.swift */,
 				3FB08FE21C99917B004F9F4D /* MovieDetailOverviewTableViewCell.swift */,
+				3F3E46611C998FA300DC7DDB /* RequestTMDB.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
