@@ -12,50 +12,43 @@ import SwiftyJSON
 
 class Movie: Object {
 
-    dynamic var Title:String!
-    dynamic var Year:String!
-    dynamic var Rated:String!
-    dynamic var Released:String!
-    dynamic var Runtime:String!
-    dynamic var Genre:String!
-    dynamic var Director:String!
-    dynamic var Language:String!
-    dynamic var Writer:String!
-    dynamic var Actors:String!
-    dynamic var Plot:String!
-    dynamic var Poster:String!
-    dynamic var imdbRating:String!
-    dynamic var imdbVotes:String!
-    dynamic var imdbID:String!
-    dynamic var Type:String!
+    dynamic var poster_path:String!
+    dynamic var adult:String!
+    dynamic var overview:String!
+    dynamic var release_date:String!
+    dynamic var genre_ids:String!
+    dynamic var id:String!
+    dynamic var original_title:String!
+    dynamic var original_language:String!
+    dynamic var title:String!
+    dynamic var backdrop_path:String!
+    dynamic var popularity:String!
+    dynamic var vote_count:String!
+    dynamic var video:String!
+    dynamic var vote_average:String!
+
     
     
     init(withJson json: JSON){
         super.init()
-        Title = json["Title"].stringValue
-        Year = json["Year"].stringValue
-        Rated = json["Rated"].stringValue
-        Released = json["Released"].stringValue
-        Runtime = json["Runtime"].stringValue
-        Genre = json["Genre"].stringValue
-        Director = json["Director"].stringValue
-        Language = json["Language"].stringValue
-        Writer = json["Writer"].stringValue
-        Actors = json["Actors"].stringValue
-        Plot = json["Plot"].stringValue
-        Poster = json["Poster"].stringValue
-        imdbRating = json["imdbRating"].stringValue
-        imdbVotes = json["imdbVotes"].stringValue
-        imdbID = json["imdbID"].stringValue
-        Type = json["Type"].stringValue
+        poster_path = json["poster_path"].stringValue
+        adult = json["adult"].stringValue
+        overview = json["overview"].stringValue
+        release_date = json["release_date"].stringValue
+        genre_ids = json["genre_ids"].stringValue
+        id = json["id"].stringValue
+        original_title = json["original_title"].stringValue
+        original_language = json["original_language"].stringValue
+        title = json["title"].stringValue
+        backdrop_path = json["backdrop_path"].stringValue
+        popularity = json["popularity"].stringValue
+        vote_count = json["vote_count"].stringValue
+        video = json["video"].stringValue
+        vote_average = json["vote_average"].stringValue
 
     }
-
     required init() {
-//        fatalError("init() has not been implemented")
         super.init()
     }
-    
-
 
 }
