@@ -76,11 +76,11 @@ class TableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
-        self.selectedAlbum = self.albums[indexPath.row]
-        
-        self.performSegueWithIdentifier("showDetailSegue", sender: self)
+//        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+//        
+//        self.selectedAlbum = self.albums[indexPath.row]
+//        
+//        self.performSegueWithIdentifier("showDetailSegue", sender: self)
     }
     
 
@@ -135,7 +135,7 @@ class TableViewController: UITableViewController {
             
             let destinationViewController: MovieDetailTableViewController = segue.destinationViewController as! MovieDetailTableViewController
             
-            destinationViewController.album = self.selectedAlbum
+            destinationViewController.album = self.albums[(tableView.indexPathForSelectedRow?.row)!]
         }
         
     }
