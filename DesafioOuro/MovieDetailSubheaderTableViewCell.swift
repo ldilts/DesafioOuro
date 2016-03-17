@@ -17,6 +17,7 @@ class MovieDetailSubheaderTableViewCell: MovieDetailTableViewCell {
     
     override func configureUI() {
         self.titleLabel.text = self.album.titleText
+        self.subtitleLabel.text = self.album.detailText
     }
     
     // MARK: - Other methods

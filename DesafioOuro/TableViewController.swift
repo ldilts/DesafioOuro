@@ -21,6 +21,8 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        requestHelper = RequestTMDB()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -38,13 +40,13 @@ class TableViewController: UITableViewController {
         self.tableView.scrollIndicatorInsets = adjustForTabbarInsets
         
         self.albums = [
-            Album(withImage: UIImage(named: "album_one")!, andTitle: "Work", andDetail: "Rihanna feat. Drake"),
-            Album(withImage: UIImage(named: "album_two")!, andTitle: "Love Yourself", andDetail: "Justin Bieber"),
-            Album(withImage: UIImage(named: "album_three")!, andTitle: "Stressed out", andDetail: "twenty one pilots"),
-            Album(withImage: UIImage(named: "album_two")!, andTitle: "Sorry", andDetail: "Justin Bieber"),
-            Album(withImage: UIImage(named: "album_five")!, andTitle: "My House", andDetail: "Flo Rida"),
-            Album(withImage: UIImage(named: "album_six")!, andTitle: "Pillow Talk", andDetail: "Zayn"),
-            Album(withImage: UIImage(named: "album_seven")!, andTitle: "Me, Myself & I", andDetail: "G-Eazy x Bebe Rexha")
+            Album(withImage: UIImage(named: "album_one")!, andTitle: "Mad Max: Estrada da Fúria", andDetail: "2015"),
+            Album(withImage: UIImage(named: "album_two")!, andTitle: "Star Wars: O Despertar da Força", andDetail: "2015"),
+            Album(withImage: UIImage(named: "album_three")!, andTitle: "Divertidamente", andDetail: "2015"),
+            Album(withImage: UIImage(named: "album_four")!, andTitle: "Spotlight: Segredos Revelados", andDetail: "2015"),
+            Album(withImage: UIImage(named: "album_five")!, andTitle: "Carol", andDetail: "2015"),
+            Album(withImage: UIImage(named: "album_six")!, andTitle: "Ex-Machina: Instinto Artificial", andDetail: "2015"),
+            Album(withImage: UIImage(named: "album_seven")!, andTitle: "Perdido em Marte", andDetail: "2015")
         ]
         
         self.tableView.reloadData()
@@ -132,7 +134,11 @@ class TableViewController: UITableViewController {
     // MARK: - Helper Methods
     
     func reload() {
+        requestHelper.request("https://api.themoviedb.org/3/movie/popular?api_key=beebbeb51a373274d8f87662b8bb4193&page=1")
+        refreshControl?.beginRefreshing()
         
+        tableView.reloadData()
+        self.refreshControl?.endRefreshing()
         
     }
     
