@@ -20,26 +20,34 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         // Set up a refresh control, call reload to start things up
-        requestHelper = RequestTMDB()
-        
         refreshControl = UIRefreshControl()
-//        refreshControl?.addTarget(self, action: "reload", forControlEvents: .ValueChanged)
-//        reload()
-        requestHelper.request("https://api.themoviedb.org/3/movie/popular?api_key=beebbeb51a373274d8f87662b8bb4193&page=1")
-        refreshControl?.beginRefreshing()
+        refreshControl?.addTarget(self, action: "reload", forControlEvents: .ValueChanged)
+        //        reload()
+        //        refreshControl?.beginRefreshing()
         
         let adjustForTabbarInsets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: CGRectGetHeight((self.tabBarController?.tabBar.frame)!), right: 0)
         self.tableView.contentInset = adjustForTabbarInsets
         self.tableView.scrollIndicatorInsets = adjustForTabbarInsets
         
+        self.albums = [
+            Album(withImage: UIImage(named: "album_one")!, andTitle: "Work", andDetail: "Rihanna feat. Drake"),
+            Album(withImage: UIImage(named: "album_two")!, andTitle: "Love Yourself", andDetail: "Justin Bieber"),
+            Album(withImage: UIImage(named: "album_three")!, andTitle: "Stressed out", andDetail: "twenty one pilots"),
+            Album(withImage: UIImage(named: "album_two")!, andTitle: "Sorry", andDetail: "Justin Bieber"),
+            Album(withImage: UIImage(named: "album_five")!, andTitle: "My House", andDetail: "Flo Rida"),
+            Album(withImage: UIImage(named: "album_six")!, andTitle: "Pillow Talk", andDetail: "Zayn"),
+            Album(withImage: UIImage(named: "album_seven")!, andTitle: "Me, Myself & I", andDetail: "G-Eazy x Bebe Rexha")
+        ]
+        
+        self.tableView.reloadData()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -131,9 +139,9 @@ class TableViewController: UITableViewController {
     func retreivedMovies(notification: NSNotification) {
         
         // TODO: Query banco
-        let realm = try! Realm()
+//        let realm = try! Realm()
         
-        self.movies = realm.objects(Movie)
+//        self.movies = realm.objects(Movie)
         
         tableView.reloadData()
         self.refreshControl?.endRefreshing()
