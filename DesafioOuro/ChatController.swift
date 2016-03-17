@@ -17,12 +17,26 @@ class ChatController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var spacerView: UIView!
     @IBOutlet weak var topView: UIView!
     
+    @IBOutlet weak var table: UITableView!
+
+    
+    var messages: [String] = []
+    
     
     @IBAction func actionSend(sender: AnyObject) {
+        
+        let text = self.textField.text
+        
+        self.messages.append(text!)
+        
+        table.reloadData()
+        
+        self.textField.text = ""
+        
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()        
+        super.viewDidLoad()
         
         
         self.textField.delegate = self
@@ -43,11 +57,16 @@ class ChatController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = table.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
+        cell.textLabel!.text = "Nome do usuário"
+        cell.textLabel?.textColor = UIColor.orangeColor()
+        cell.detailTextLabel?.text = "\(messages[indexPath.row])"
+        
+        return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return messages.count
     }
     
     func keyboardDidHide(notification: NSNotification) {
